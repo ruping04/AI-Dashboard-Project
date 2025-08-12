@@ -1,0 +1,19 @@
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Environment variables - VERY IMPORTANT for security
+.env
+
+# ChromaDB local storage
+db/chroma_db/
