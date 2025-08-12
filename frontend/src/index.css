@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.dashboard-background {
+  background-color: #0d1117; /* A very dark, professional navy/charcoal */
+  background-image: radial-gradient(#30363d 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbar styling to match the dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #30363d;
+  border-radius: 10px;
+  border: 2px solid #161b22;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #484f58;
+}
+
+/* Add this to the bottom of src/index.css */
+
+.aurora-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 0; /* Ensures it's behind the content */
+}
+
+.aurora-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px); /* This creates the soft, glowing effect */
+  opacity: 0.3;
+}
+
+.aurora-shape1 {
+  width: 400px;
+  height: 400px;
+  background-color: #3b82f6; /* Blue */
+  top: 10%;
+  left: 20%;
+  animation: move-aurora1 20s infinite alternate ease-in-out;
+}
+
+.aurora-shape2 {
+  width: 300px;
+  height: 300px;
+  background-color: #14b8a6; /* Teal */
+  top: 50%;
+  left: 60%;
+  animation: move-aurora2 25s infinite alternate ease-in-out;
+}
+
+@keyframes move-aurora1 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(50%, 50%) rotate(360deg); }
+}
+
+@keyframes move-aurora2 {
+  from { transform: translate(30%, 30%) rotate(0deg); }
+  to { transform: translate(-30%, -30%) rotate(180deg); }
+}
